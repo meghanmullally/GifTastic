@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!--Google Font-->
-<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
   <!---Css Files-->
   <link rel="stylesheet" href="assets/styles/reset.css">
   <link rel="stylesheet" href="assets/styles/styles.css">
@@ -23,40 +23,22 @@
 
   <div class="container">
     <h1>GIF RATINGS</h1>
+    <!--Gif buttons will be here-->
+    <div id="buttons-view"></div>
 
-    <!-- <div class="row">
-      <div class="col-sm-8"> -->
 
-        <!--Gif buttons will be here-->
-        <div id="buttons-view"></div>
+    <form id="gif-form">
+      <label for="gif-input">Add a GIF here!</label>
+      <br>
+      <input type="text" id="gif-input">
+      <br>
 
-      <!-- </div>
-      <div class="col-sm-4"> -->
+      <!--button triggers new gif to be added--->
+      <input id="add-gif" type="submit" value="Add a GIF here!">
 
-        <form id="gif-form">
-          <label for="gif-input">Add a GIF here!</label>
-          <input type="text" id="gif-input">
-          <br>
+    </form>
 
-          <!--button triggers new gif to be added--->
-          <input id="add-gif" type="submit" value="Add a GIF here!">
-
-        </form>
-<!-- 
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">col-sm</div>
-      <div class="col-sm">col-sm</div>
-      <div class="col-sm">col-sm</div>
-    </div> -->
     <div id="gifs-here"></div>
-
-
-
-
-
 
 
   </div>

@@ -5,13 +5,16 @@
 var gifs = ["sailor moon", "inuyasha", "pokemon", "attack on titans", "howls moving castle", "castle in the sky", "your name"];
 
 
+$("button").on("click", function() {
 
-// Constructing a URL to search GIPHY for the user input 
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=&api_key=IULgPyyWW0mmxcyH0UIJtbs1vAw4jfz5"
+var gifInfo = $(this).attr("data-gif");
+
+  // Constructing a URL to search GIPHY for the user input 
+
+var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifInfo + "&api_key=IULgPyyWW0mmxcyH0UIJtbs1vAw4jfz5"; 
 
 // API_KEY = "&api_key=IULgPyyWW0mmxcyH0UIJtbs1vAw4jfz5";
-
 
 // Performing our AJAX GET request
 
@@ -60,6 +63,7 @@ $.ajax({
 
     }
 
+  }); 
 
     // function for displaying gif data 
     function renderButtons() {
@@ -71,6 +75,7 @@ $.ajax({
       for (var j = 0; j < gifs.length; j++) {
         var button = $("<button>");
         button.text(gifs[i]);
+
         $("#buttons-view").append(button);
 
       }
@@ -96,3 +101,4 @@ $.ajax({
     // calling the renderbuttons function to display the initial list of gifs 
     renderButtons();
   });
+

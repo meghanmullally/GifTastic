@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Acme', sans-serif;
+  background-image: url("../images/background-cement-concrete-242236.jpg");
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+/*Head tags*/
+
+h1 {
+  font-size: 45px;
+  margin: 10px;
+}
+
+/*Gif input*/
+
+#gif-input {
+  margin: 10px;
+  padding: 10px;
+  line-height: 15px;
+}
+
+#add-gif {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.container {
+  margin: 20px;
+  padding: 20px;
+}

@@ -47,3 +47,17 @@ label {
   margin: 15px;
   font-weight: normal;
 }
+
+p {
+  font-weight: normal;
+  font-size: 25px;
+  padding: 10px;
+}
+
+/* #gif-dump {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  
+align-items: baseline;
+} */

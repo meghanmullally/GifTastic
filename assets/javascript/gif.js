@@ -47,9 +47,16 @@ $(document).on("click", ".gif", function () {
 
         // creating image tag 
         var gifImg = $("<img>");
+        gifImg.addClass("gif-image");
+
+
+        // gif-images attributes 
+        gifImg.attr("data-still", results[i].images.fixed_height_still.url);
+        gifImg.attr("data-state", "still");
+        gifImg.attr("data-animate", results[i].images.fixed_height.url);
 
         // Image tag with src attr 
-        gifImg.attr("src", results[i].images.fixed_height.url);
+        gifImg.attr("src", results[i].images.fixed_height_still.url);
 
         // APPEND the paragraph and gifImg to "gifDiv"
         gifDiv.append(p);
@@ -63,6 +70,27 @@ $(document).on("click", ".gif", function () {
 
       }
 
+      // STILL / ANIMATED FUNCTION 
+
+      $(".gif-image").on("click", function () {
+
+
+        var state = $(this).attr("data-state");
+        //hint your gifs are going to need 3 attributes
+        //data-still, data-animate, and data-state
+        //also since your gifs are dynamically created
+        //you're going to have to do something special with the
+        //on click function
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+
+
+      });
 
     });
 
@@ -85,6 +113,7 @@ function renderButtons() {
     $("#buttons-view").append(button);
 
   }
+
 
 }
 // function handles evenet where the add gif button is clicked 
@@ -110,23 +139,6 @@ $("#add-gif").on("click", function (event) {
 
 });
 
-// STILL / ANIMATED FUNCTION 
-
-$(".gif").on("click", function () {
-
-
-  var state = $(this).attr("data-state");
-
-  if (state === "still") {
-    $(this).attr("src", $(this).attr("data-animate"));
-    $(this).attr("data-state", "animate");
-  } else {
-    $(this).attr("src", $(this).attr("data-still"));
-    $(this).attr("data-state", "still");
-  }
-
-
-});
 
 
 // calling the renderbuttons function to display the initial list of gifs 

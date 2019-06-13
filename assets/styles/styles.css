@@ -3,15 +3,18 @@
 }
 
 body {
-  font-family: 'Acme', sans-serif;
-  background-image: url("../images/background-cement-concrete-242236.jpg");
+  background-image: url("http://www.sclance.com/backgrounds/white-anime-background/white-anime-background_2385063.png");
   margin: 0 auto;
   padding: 0 auto;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-position: fixed;
 }
 
 /*Head tags*/
 
 h1 {
+  font-family: 'Acme', sans-serif;
   font-size: 45px;
   margin: 10px;
 }
@@ -24,6 +27,11 @@ h1 {
   line-height: 15px;
 }
 
+label {
+  font-weight: bolder;
+  position: relative;
+}
+
 #add-gif {
   padding: 10px;
   margin: 10px;
@@ -33,4 +41,9 @@ h1 {
 .container {
   margin: 20px;
   padding: 20px;
+}
+
+#buttons-view {
+  margin: 15px;
+  font-weight: normal;
 }
